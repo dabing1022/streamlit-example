@@ -4,3 +4,5 @@ streamlit
 numpy
 matplotlib
 graphviz
+openpyxl
+streamlit-echarts
