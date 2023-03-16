@@ -387,18 +387,18 @@ st.line_chart(merged[[   qckey.proportion(qckey.all(qckey.cannot_into_sys_andr))
                          ]], use_container_width=True)
 
 st.markdown(f"### {qckey.fast_power_consumption_total}")
-st.line_chart(merged[[   qckey.proportion(qckey.all(qckey.total_fast_power_consumption_total)),
+st.line_chart(merged[[   qckey.proportion(qckey.all(qckey.fast_power_consumption_total)),
                          qckey.proportion(qckey.perf(qckey.fast_power_consumption_total)),
                          qckey.proportion(qckey.no_perf(qckey.fast_power_consumption_total))
                          ]], use_container_width=True)
 
 st.markdown(f"#### iOS")
-st.line_chart(merged[[   qckey.proportion(qckey.all(qckey.total_fast_power_consumption_ios)),
-                         qckey.proportion(qckey.perf(qckey.total_fast_power_consumption_ios)),
-                         qckey.proportion(qckey.no_perf(qckey.total_fast_power_consumption_ios))
+st.line_chart(merged[[   qckey.proportion(qckey.all(qckey.fast_power_consumption_ios)),
+                         qckey.proportion(qckey.perf(qckey.fast_power_consumption_ios)),
+                         qckey.proportion(qckey.no_perf(qckey.fast_power_consumption_ios))
                          ]], use_container_width=True)
 st.markdown(f"#### Android")
-st.line_chart(merged[[   qckey.proportion(qckey.all(qckey.total_fast_power_consumption_andr)),
+st.line_chart(merged[[   qckey.proportion(qckey.all(qckey.fast_power_consumption_andr)),
                          qckey.proportion(qckey.perf(qckey.fast_power_consumption_andr)),
                          qckey.proportion(qckey.no_perf(qckey.fast_power_consumption_andr))
                          ]], use_container_width=True)
