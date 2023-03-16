@@ -42,5 +42,20 @@ screen_display_exception_total = "屏幕无法正常显示"
 screen_display_exception_ios = "屏幕无法正常显示(ios)"
 screen_display_exception_andr = "屏幕无法正常显示(android)"
 
+date = "日期"
+
+merge_suffix_perf = "-perf"
+merge_suffix_noperf = "-noperf"
+merge_suffix_all = "-all"
 def proportion(key):
     return key + "-占比"
+
+
+def no_perf(key):
+    return key + "-noperf"
+
+def perf(key):
+    return key + "-perf"
+
+def all(key):
+    return key + "-all"
