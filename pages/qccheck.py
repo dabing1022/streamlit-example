@@ -135,6 +135,14 @@ total_check_rate_option = {
   "title": {
     "text": ''
   },
+  "dataZoom": [
+    {
+      "xAxisIndex": 0
+    },
+    {
+      "yAxisIndex": 0
+    }    
+  ],
   "tooltip": {
     "trigger": 'axis'
   },
@@ -220,6 +228,14 @@ ios_check_rate_option = {
   "title": {
     "text": ''
   },
+  "dataZoom": [
+    {
+      "xAxisIndex": 0
+    },
+    {
+      "yAxisIndex": 0
+    }    
+  ],  
   "tooltip": {
     "trigger": 'axis'
   },
@@ -305,6 +321,14 @@ andr_check_rate_option = {
   "title": {
     "text": ''
   },
+  "dataZoom": [
+    {
+      "xAxisIndex": 0
+    },
+    {
+      "yAxisIndex": 0
+    }    
+  ],  
   "tooltip": {
     "trigger": 'axis'
   },
