@@ -81,6 +81,7 @@ dataframe[qckey.proportion(qckey.total_fault)] = (dataframe[qckey.screen_stripes
                                + dataframe[qckey.motherboard_failure_total]  
                                + dataframe[qckey.screen_display_exception_total]) / dataframe[qckey.total]
 
+dataframe.fillna(0, inplace=True)
 st.write(dataframe)
 
 dataframe.set_index('日期', inplace=True)
