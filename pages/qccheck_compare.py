@@ -7,6 +7,11 @@ from streamlit_echarts import st_echarts
 uploaded_excel_file_all = st.file_uploader("上传【30天内故障检出量统计(所有站点)】 Excel 文件", type=["xlsx"])
 uploaded_excel_file_perf = st.file_uploader("上传【30天内运行过性能检测的设备的故障检出数据(所有站点)】 Excel 文件", type=["xlsx"])
 
+@st.cache_data
+def convert_df(df):
+    # IMPORTANT: Cache the conversion to prevent computation on every rerun
+    return df.to_csv().encode('utf-8')
+
 if uploaded_excel_file_all is None:
     st.stop()
 
@@ -254,7 +259,14 @@ merged[qckey.proportion(qckey.no_perf(qckey.total_fault))] = (merged[qckey.no_pe
                                + merged[qckey.no_perf(qckey.screen_display_exception_total)]) / merged[qckey.no_perf(qckey.total)]
 
 st.write(merged)
+merged_csv = convert_df(merged)
 
+st.download_button(
+    label="下载整理后的表格",
+    data=merged_csv,
+    file_name='[All-Perf-NoPerf]30天内故障检出量统计(所有站点).csv',
+    mime='text/csv',
+)
 
 merged.set_index('日期', inplace=True)
 st.markdown(f"### {qckey.total_fault}")
