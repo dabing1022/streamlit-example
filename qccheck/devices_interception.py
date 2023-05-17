@@ -6,6 +6,7 @@ from operator import itemgetter
 total_imeis = set()
 # 统计日志规则命中的imei数
 rules = [
+  # done
    'AOP PANIC',
    'Missing sensor(s)',
    'AppleSocHot',
@@ -14,6 +15,7 @@ rules = [
    'SEP Panic',
    'AppleSEPManager panic for AppleSEPKeyStore: sks request timeout',
 
+  # to do
    'WDT timeout',
    'userspace watchdog timeout: no successful checkins from SpringBoard',
    'Unexpected fault in kernel static region',
